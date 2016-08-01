@@ -1,5 +1,13 @@
 FROM gcr.io/google_appengine/python:1.3
 MAINTAINER Wasnot <wasnot@example.com>
+
+RUN virtualenv /env -p python
+
+# Set virtualenv environment variables. This is equivalent to running
+# source /env/bin/activate
+ENV VIRTUAL_ENV /env
+ENV PATH /env/bin:$PATH
+
 RUN \
     pip install -U setuptools pip && \
     pip install chainer==1.6.2 && \
