@@ -10,7 +10,8 @@ ENV PATH /env/bin:$PATH
 
 RUN \
     pip install -U setuptools pip && \
-    pip install chainer==1.6.2 && \
+    pip install chainer==1.6.2.1 && \
+    pip install numpy==1.11.1 && \
     pip install scipy==0.15.1 && \
     pip install scikit-learn==0.17.1 && \
     pip install pandas==0.18.1
